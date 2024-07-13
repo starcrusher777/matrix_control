@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"name": "migalka",
+			"path": "../../migalka"
+		},
+		{
+			"name": "240709-011342-arduino-blink",
+			"path": "../../240709-011342-arduino-blink"
+		},
+		{
+			"name": "240709-183149-arduino-blink",
+			"path": "../../240709-183149-arduino-blink"
+		},
+		{
+			"name": "240711-144238-arduino-blink",
+			"path": "../../240711-144238-arduino-blink"
+		},
+		{
+			"name": "240712-012323-arduino-webserver",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
