@@ -8,6 +8,7 @@
 const char* ssid = "";
 const char* password = "";
 
+// define ur pins
 const int DIN_PIN = D4;
 const int CS_PIN = D0;
 const int CLK_PIN = D5;
@@ -17,6 +18,8 @@ const int NUM_MATRICES = 4;
 LedControl lc = LedControl(DIN_PIN, CLK_PIN, CS_PIN, NUM_MATRICES);
 
 ESP8266WebServer server(80);
+
+//rgb led and 2 leds control(unnecessary)
 
 uint8_t LED1pin = D7;
 bool LED1status = LOW;
@@ -67,13 +70,13 @@ void setup()
   }
 
   server.on("/", handle_OnConnect);
-  server.on("/color", handle_ColorChange);
+  server.on("/color", handle_ColorChange); //this too
   server.on("/root", handleRoot);
   server.on("/updateMatrix", HTTP_POST, handleUpdateMatrix);
-  server.on("/led1on", handle_led1on);
-  server.on("/led1off", handle_led1off);
-  server.on("/led2on", handle_led2on);
-  server.on("/led2off", handle_led2off);
+  server.on("/led1on", handle_led1on); //and this
+  server.on("/led1off", handle_led1off); //and this
+  server.on("/led2on", handle_led2on); //and this
+  server.on("/led2off", handle_led2off); //and this
   server.onNotFound(handle_NotFound);
 
   server.begin();
